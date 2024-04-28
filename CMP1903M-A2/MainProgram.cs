@@ -14,29 +14,14 @@ namespace CMP1903M_A2
             while (loop)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Welcome To The Die Roll Games 2! \n" +
-                    "Please Select an option -");
+                Console.WriteLine("Welcome To The Die Roll Games 2!\n" + "Please Select an option -");
                 Console.WriteLine(("").PadRight(24, '-'));
-                Console.WriteLine("1 - Play a game \n" +
-                    "2 - testing \n" +
-                    "3 - stats \n " +
-                    "4 - exit \n" +
-                    ("").PadRight(24, '-'));
+                Console.WriteLine("1 - Play a game\n" + "2 - testing\n" + "3 - stats\n " + "4 - rules\n" + "5 - exit\n" + ("").PadRight(24, '-'));
                 
-                
-                
-                Console.WriteLine("Would you like to play with a  partner or the computer?");
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                string playerOrCpu = Console.ReadLine();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("What game would you like to do?");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 String UInput = Console.ReadLine();
-                Game game = new Game();
-                while (true)
-                {
-                    game.game();
-                }
+                Console.ForegroundColor= ConsoleColor.Yellow;
+                Game balls = new Game();
                 if (UInput == "1")
                 {
 
@@ -51,7 +36,14 @@ namespace CMP1903M_A2
                 }
                 else if (UInput == "4")
                 {
-                    
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    string ruleTXT = File.ReadAllText(@"Files\gamerules.txt");
+                    Console.WriteLine(ruleTXT);
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                }
+                else if (UInput == "5")
+                {
+
                 }
             }
         }

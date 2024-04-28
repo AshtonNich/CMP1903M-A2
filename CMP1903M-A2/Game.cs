@@ -11,15 +11,12 @@ namespace CMP1903M_A2
         public void game()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Welcome to Sevens out! \n" +
-                "what game would you like to play? \n " +
-                "1 - sevens out \n 2- Three or More \n" +
-                ("").PadRight(24, '-'));
+            Console.WriteLine("what game would you like to play?\n " + "1 - sevens out \n 2- Three or More\n" + ("").PadRight(24, '-'));
             Console.ForegroundColor= ConsoleColor.Magenta;
             string userGame = Console.ReadLine();
             if (userGame == "1")
             {
-
+                SevensOut seven = new SevensOut();
             }
 
         }
