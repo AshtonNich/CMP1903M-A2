@@ -15,19 +15,31 @@ namespace CMP1903M_A2
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Welcome To The Die Roll Games 2! \n" +
-                    "Please Select a Gamemode -");
+                    "Please Select an option -");
                 Console.WriteLine(("").PadRight(24, '-'));
-                Console.WriteLine("1 - Sevens Out \n" +
-                    "2 - Three or more \n" +
-                    "3 - testing \n" +
-                    "4 - exit \n " +
+                Console.WriteLine("1 - Play a game \n" +
+                    "2 - testing \n" +
+                    "3 - stats \n " +
+                    "4 - exit \n" +
                     ("").PadRight(24, '-'));
+                
+                
+                
+                Console.WriteLine("Would you like to play with a  partner or the computer?");
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                string playerOrCpu = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("What game would you like to do?");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 String UInput = Console.ReadLine();
-
+                Game game = new Game();
+                while (true)
+                {
+                    game.game();
+                }
                 if (UInput == "1")
                 {
-                    
+
                 }
                 else if (UInput == "2")
                 {
@@ -39,7 +51,7 @@ namespace CMP1903M_A2
                 }
                 else if (UInput == "4")
                 {
-                    break;
+                    
                 }
             }
         }
