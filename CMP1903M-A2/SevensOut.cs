@@ -14,11 +14,23 @@ namespace CMP1903M_A2
 
         public void Sevens()
         {
-            Console.WriteLine("Welcome to the sevens out game! \n would you like to play witha  partner or with the computer?");
+            Console.WriteLine("Welcome to the sevens out game!\nwould you like to play with a partner or with the computer?");
             string cpuORplayer = Console.ReadLine();
             if (cpuORplayer == "computer") 
             {
-                Console.WriteLine("shaboom boom");
+                int roll1 = dice1.Roll();
+                int roll2 = dice2.Roll();
+
+                Console.WriteLine("Press any button to roll");
+                Console.ReadLine();
+                if (roll1 + roll2 == 7)
+                {
+                    Console.WriteLine("both roll 1 " + roll1 + " and roll 2 " + roll2 + " add up to seven.\nEnding Game!");
+                }
+                else if (roll1 == roll2)
+                {
+
+                }
             }
         }
     }

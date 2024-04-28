@@ -10,8 +10,7 @@ namespace CMP1903M_A2
     {
         static void Main(string[] args)
         {
-            bool loop = true;
-            while (loop)
+            while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Welcome To The Die Roll Games 2!\n" + "Please Select an option -");
@@ -21,10 +20,10 @@ namespace CMP1903M_A2
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 String UInput = Console.ReadLine();
                 Console.ForegroundColor= ConsoleColor.Yellow;
-                Game balls = new Game();
                 if (UInput == "1")
                 {
-
+                    Game balls = new Game();
+                    balls.game();
                 }
                 else if (UInput == "2")
                 {

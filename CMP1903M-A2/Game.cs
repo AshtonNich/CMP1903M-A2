@@ -10,15 +10,27 @@ namespace CMP1903M_A2
     {
         public void game()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("what game would you like to play?\n " + "1 - sevens out \n 2- Three or More\n" + ("").PadRight(24, '-'));
-            Console.ForegroundColor= ConsoleColor.Magenta;
-            string userGame = Console.ReadLine();
-            if (userGame == "1")
+            while (true)
             {
-                SevensOut seven = new SevensOut();
-            }
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("what game would you like to play?\n " + "1 - sevens out \n 2 - Three or More\n" + ("").PadRight(24, '-'));
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                string userGame = Console.ReadLine();
+                if (userGame == "1")
+                {
+                    SevensOut sevengame = new SevensOut();
+                    sevengame.Sevens();
+                }
+                else if (userGame == "2")
+                {
 
+                }
+                else
+                {
+                    break;
+                }
+
+            }
         }
     }
 }
