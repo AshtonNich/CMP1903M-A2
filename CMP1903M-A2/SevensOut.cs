@@ -14,12 +14,14 @@ namespace CMP1903M_A2
         private int total;
         private int temp;
         private int rolled;
+        private int CPUtotal;
+        public int wins;
 
         public void Sevens()
         {
             Console.WriteLine("Welcome to the sevens out game!\nwould you like to play with a partner or with the computer?");
             string cpuORplayer = Console.ReadLine();
-            if (cpuORplayer == "computer") 
+            if (cpuORplayer.ToLower() == "computer") 
             {
                 while (true)
                 {
@@ -28,7 +30,7 @@ namespace CMP1903M_A2
 
                     Console.WriteLine("Press enter to roll or type stop to break out of the game");
                     string Uplay = Console.ReadLine();
-                    if (Uplay == "stop")
+                    if (Uplay.ToLower() == "stop")
                     {
                         break;
                     }
@@ -38,6 +40,16 @@ namespace CMP1903M_A2
                         {
                             Console.WriteLine("both roll one " + roll1 + " and roll two " + roll2 + " add up to seven.\nEnding Game!");
                             rolled++;
+                            Console.WriteLine("your total score at the end was: " + total + " \nand the computer scored: " + CPUtotal);
+                            if (total > CPUtotal)
+                            {
+                                wins++;
+                                Console.WriteLine("PLAYER WINS!\nPlayer wins = " + wins);
+                            }
+                            else
+                            {
+                                Console.WriteLine("CPU WINS!");
+                            }
                             break;
                         }
                         else if (roll1 == roll2)
@@ -51,6 +63,9 @@ namespace CMP1903M_A2
                         else
                         {
                             Console.WriteLine("roll 1 is " + roll1 + " and roll 2 is " + roll2);
+                            rolled++;
+                            temp = roll1 + roll2;
+                            total += temp;
                             break;
                         }
 

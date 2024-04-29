@@ -8,7 +8,7 @@ namespace CMP1903M_A2
 {
     internal class Game
     {
-        public void game()
+        public static void game()
         {
             while (true)
             {

@@ -15,15 +15,14 @@ namespace CMP1903M_A2
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Welcome To The Die Roll Games 2!\n" + "Please Select an option -");
                 Console.WriteLine(("").PadRight(24, '-'));
-                Console.WriteLine("1 - Play a game\n" + "2 - testing\n" + "3 - stats\n " + "4 - rules\n" + "5 - exit\n" + ("").PadRight(24, '-'));
+                Console.WriteLine("1 - Play a game\n" + "2 - testing\n" + "3 - stats\n" + "4 - rules\n" + "5 - exit\n" + ("").PadRight(24, '-'));
                 
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 String UInput = Console.ReadLine();
                 Console.ForegroundColor= ConsoleColor.Yellow;
                 if (UInput == "1")
                 {
-                    Game balls = new Game();
-                    balls.game();
+                    Game.game();
                 }
                 else if (UInput == "2")
                 {
