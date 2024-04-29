@@ -42,7 +42,7 @@ namespace CMP1903M_A2
                 }
                 else if (UInput == "5")
                 {
-
+                    Environment.Exit(0);
                 }
             }
         }

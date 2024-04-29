@@ -13,7 +13,7 @@ namespace CMP1903M_A2
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("what game would you like to play?\n " + "1 - sevens out \n 2 - Three or More\n" + ("").PadRight(24, '-'));
+                Console.WriteLine("what game would you like to play?\n " + "1 - sevens out \n 2 - Three or More\n 3 - back to menu\n" + ("").PadRight(24, '-'));
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 string userGame = Console.ReadLine();
                 if (userGame == "1")
