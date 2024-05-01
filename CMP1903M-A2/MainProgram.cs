@@ -26,7 +26,7 @@ namespace CMP1903M_A2
                 }
                 else if (UInput == "2")
                 {
-
+                    Testing.testing();
                 }
                 else if (UInput == "3")
                 {
