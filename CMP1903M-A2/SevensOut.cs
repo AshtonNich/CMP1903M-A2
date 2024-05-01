@@ -12,10 +12,11 @@ namespace CMP1903M_A2
         private Die dice1 = new Die();
         private int total;
         private int temp;
-        private int rolled;
+        public int rolled;
         private int CPUtotal;
         private int p2total;
         public int wins;
+        public int winsCall;
 
         public void Sevens()
         {
@@ -190,6 +191,8 @@ namespace CMP1903M_A2
                 }
 
             }
+            winsCall += wins;
         }
+        
     }
 }

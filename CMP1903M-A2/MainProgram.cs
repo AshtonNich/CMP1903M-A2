@@ -30,7 +30,7 @@ namespace CMP1903M_A2
                 }
                 else if (UInput == "3")
                 {
-
+                    Stats.stats();
                 }
                 else if (UInput == "4")
                 {
