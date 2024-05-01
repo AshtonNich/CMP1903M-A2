@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +28,8 @@ namespace CMP1903M_A2
                     int testRoll = testDie.Roll();
                     int testRoll2 = testDie.Roll();
                     int total = testRoll + testRoll2;
-                    Debug.Assert(total != 7, "total does not equal 7" )
-                    in testAmount = i;
+                    Debug.Assert(total >= 2 && total <= 12, "total does not equal 7");
+                    int testAmount = i;
                 }
                 Console.WriteLine("1000 tests passed successfully!");
             }
