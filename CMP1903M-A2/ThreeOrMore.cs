@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_A2
 {
+    using System;
+
     public class ThreeOrMore
     {
         private Die[] dice = new Die[5];
@@ -17,6 +19,7 @@ namespace CMP1903M_A2
                 dice[i] = new Die();
             }
         }
+
         private int[] RollAllDice()
         {
             int[] rolls = new int[dice.Length];
@@ -32,7 +35,15 @@ namespace CMP1903M_A2
             int maxCount = 0;
             foreach (int rolled in rolls)
             {
-                int count = Array.FindAll(rolls, x => x == rolled).Length;
+                // Repeated code block
+                int count = 0;
+                foreach (int roll in rolls)
+                {
+                    if (roll == rolled)
+                    {
+                        count++;
+                    }
+                }
                 if (count > maxCount)
                 {
                     maxCount = count;
@@ -48,15 +59,19 @@ namespace CMP1903M_A2
             while (score < 20)
             {
                 int[] rolls = RollAllDice();
-                Console.WriteLine($"You rolled: {string.Join(", ", rolls)}");
-
+                Console.WriteLine($"You rolled - {string.Join(", ", rolls)}");
                 int maxCount = GetMaxCount(rolls);
 
                 if (maxCount >= 3)
                 {
-                    int points = (maxCount == 3) ? 3 : (maxCount == 4) ? 6 : 12;
-                    score += points;
-                    Console.WriteLine("You got " + maxCount + " of-a-kind!\nEarned" + points + "\nYour total score: " + score);
+                    int points = 0;
+                    if (maxCount == 3)
+                    {
+                        points = 3;
+                        score += points;
+                        Console.WriteLine("You got " + maxCount + " of a kind!\nEarned" + points + "\nYour total score: " + score);
+
+                    }
                 }
                 else
                 {
@@ -68,7 +83,7 @@ namespace CMP1903M_A2
             Console.WriteLine("Congratulations! You reached 20 points!");
             return score;
         }
-
-
     }
+
+
 }
