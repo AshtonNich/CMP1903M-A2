@@ -35,7 +35,6 @@ namespace CMP1903M_A2
             int maxCount = 0;
             foreach (int rolled in rolls)
             {
-                // Repeated code block
                 int count = 0;
                 foreach (int roll in rolls)
                 {
