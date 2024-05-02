@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_A2
 {
-    using System;
-
     public class ThreeOrMore
     {
         private Die[] dice = new Die[5];
