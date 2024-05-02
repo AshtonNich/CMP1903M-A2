@@ -17,8 +17,31 @@ namespace CMP1903M_A2
                 dice[i] = new Die();
             }
         }
+        private int[] RollAllDice()
+        {
+            int[] rolls = new int[dice.Length];
+            for (int i = 0; i < dice.Length; i++)
+            {
+                rolls[i] = dice[i].Roll();
+            }
+            return rolls;
+        }
 
-        public int Play()
+        private int GetMaxCount(int[] rolls)
+        {
+            int maxCount = 0;
+            foreach (int rolled in rolls)
+            {
+                int count = Array.FindAll(rolls, x => x == rolled).Length;
+                if (count > maxCount)
+                {
+                    maxCount = count;
+                }
+            }
+            return maxCount;
+        }
+
+        public int Threes()
         {
             int score = 0;
 
@@ -46,28 +69,6 @@ namespace CMP1903M_A2
             return score;
         }
 
-        private int[] RollAllDice()
-        {
-            int[] rolls = new int[dice.Length];
-            for (int i = 0; i < dice.Length; i++)
-            {
-                rolls[i] = dice[i].Roll();
-            }
-            return rolls;
-        }
 
-        private int GetMaxCount(int[] rolls)
-        {
-            int maxCount = 0;
-            foreach (int faceValue in rolls)
-            {
-                int count = Array.FindAll(rolls, x => x == faceValue).Length;
-                if (count > maxCount)
-                {
-                    maxCount = count;
-                }
-            }
-            return maxCount;
-        }
     }
 }

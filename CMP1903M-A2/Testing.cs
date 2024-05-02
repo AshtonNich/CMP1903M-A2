@@ -34,7 +34,11 @@ namespace CMP1903M_A2
             }
             else if (UInput == "2")
             {
-                Console.WriteLine("Test 2");
+                ThreeOrMore three = new ThreeOrMore();
+                for (int i = 0; i<1000; i++)
+                {
+                    Console.WriteLine("...");
+                }
             }
             else if (UInput == "3")
             {

@@ -24,7 +24,7 @@ namespace CMP1903M_A2
                 else if (userGame == "2")
                 {
                     ThreeOrMore threegame = new ThreeOrMore();
-                    threegame.Play();
+                    threegame.Threes();
                 }
                 else
                 {

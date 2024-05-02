@@ -12,6 +12,7 @@ namespace CMP1903M_A2
         {
             SevensOut wins = new SevensOut();
             int winValue = wins.winsCall;
+            int rolls = wins.rolled;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Welcome to the stats page\n" + "Please select an option -");
             Console.WriteLine(("").PadRight(24, '-'));
@@ -23,6 +24,7 @@ namespace CMP1903M_A2
             if (UInput == "1")
             {
                 Console.WriteLine("Wins - " + winValue);
+                Console.WriteLine("Rolls - " + rolls);
             }
             else if (UInput == "2")
             {

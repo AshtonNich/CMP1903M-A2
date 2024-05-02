@@ -160,7 +160,7 @@ namespace CMP1903M_A2
                         roll2 = dice1.Roll();
                         if (roll1 == roll2)
                         {
-                            Console.WriteLine("CPU rolled " + roll1 + " and " + roll2);
+                            Console.WriteLine("Player 2 rolled " + roll1 + " and " + roll2);
                             temp = roll1 + roll2;
                             p2total += temp * 2;
                         }
